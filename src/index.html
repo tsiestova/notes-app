@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+</head>
+<body>
+<div class="layout">
+    <div class="main-content__wrap">
+        <ul id="task-list" class="task__list">
+            <li class="task__item task__item--headers">
+                <div class="task__item__component">Name</div>
+                <div class="task__item__component">Created</div>
+                <div class="task__item__component">Category</div>
+                <div class="task__item__component">Content</div>
+                <div class="task__item__component">Dates</div>
+                <div class="task__item__component">
+                    <button type="button"><i class="fa-sharp fa-solid fa-arrow-down"></i></button>
+                    <button type="button" id="btn-clear"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </li>
+        </ul>
+
+        <div class="btn__form__wrap">
+            <button type="button" class="btn__form--display" id="btn-display">
+                Create note
+            </button>
+        </div>
+
+        <form id="form-task" class="form__task">
+            <div class="btn__form__wrap">
+                <button type="button" id="btn-close" class="btn__form--close btn--red">
+                    Close
+                </button>
+            </div>
+            <input required autofocus type="text" name="title" id="task-name" class="form__input--text" placeholder="Add new note">
+
+            <select name="category" id="task-type" class="form__select--category" name="category">
+                <option value="" disabled>--Choose type--</option>
+                <option value="task" selected>Task</option>
+                <option value="random-thought">Random Thought</option>
+                <option value="idea">Idea</option>
+            </select>
+
+            <textarea class="form__task__content" id="task-description" name="description"
+                      rows="5" cols="32">
+    </textarea>
+            <input  class="form__input--date" type="date" id="task-date" name="data">
+
+
+            <button type="submit" class="form__btn-submit" id="btn-submit">Add</button>
+        </form>
+
+<!--        template-->
+
+        <template id="list__item__element">
+            <div class="list__item--text">
+                <div data-id="render-icon-value"></div>
+                <span data-id="render-title-value"></span>
+            </div>
+            <div data-id="render-time-value"></div>
+            <div data-id="render-category-value" class="category"></div>
+            <div data-id="render-description"></div>
+            <div data-id="render-dates-value"></div>
+            <div>
+                <button type="button" class="btn__edit--task" id="btn-edit"><i class="fa-solid fa-pen"></i>
+                </button>
+                <button type="button" id="btn-archived"><i class="fa-sharp fa-solid fa-arrow-down"></i></button>
+                <button type="button" id="btn-delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </template>
+
+        <!--        archived-->
+        <ul id="task__list--archived" class="task__list task__list--archived">
+            <li class="task__item task__item--total task__item--headers">
+                <div class="task__item__component">Note category</div>
+                <div class="task__item__component">Active</div>
+                <div class="task__item__component">Archived</div>
+            </li>
+        </ul>
+
+        <!--        archived-template-->
+
+        <template id="list__item__element--archived">
+            <h3>Archived:</h3>
+            <div class="list__item--text">
+                <div data-id="render-icon-value"></div>
+                <span data-id="render-title-value"></span>
+            </div>
+            <div data-id="render-time-value"></div>
+            <div data-id="render-category-value" class="category"></div>
+        </template>
+
+    </div>
+
+</div>
+
+</body>
+</html>

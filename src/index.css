@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    max-width: 60vw;
+    margin: auto;
+}
+
+.btn__form__wrap {
+    text-align: right;
+}
+
+.task__item__component {
+   font-weight: bold;
+}
+
+.create-note-item_btn {
+    text-align: right;
+    padding: 10px;
+}
+
+.task__list {
+    margin: auto;
+}
+
+.task__item {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(65px, auto);
+    align-items: center;
+    background: #d4e3f7;
+    margin-bottom: 10px;
+    list-style: none;
+    color: #423f3f;
+}
+
+.task__item--total {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.task__item__child:hover {
+    cursor: pointer;
+    opacity: 80%;
+    color: black;
+}
+
+.task__item div {
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.task__item div:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.task__item--headers {
+    background-color: #7a7a7a;
+    color: white;
+    padding: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.form__task {
+    border: 1px solid;
+    padding: 20px;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    display: flex;
+    width: 70%;
+    margin: auto auto 20px;
+}
+
+.edit-note-input {
+    display: none;
+}
+
+.btn--red {
+    background-color: #af3535;
+    color: white;
+    outline: none;
+}
+
+.form__task__content {
+    outline: none;
+    padding: 10px 0;
+}
+
+.btn__form--close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid;
+    opacity: 90%;
+}
+
+.btn__form--close:hover {
+    opacity: 100%;
+}
+
+button {
+    padding: 5px;
+}
+
+input {
+    padding: 10px;
+}
+
+.form__btn-submit {
+    background: #d4e3f7;
+    border: 1px solid #95baea;
+    padding: 10px;
+    width: 80px;
+    color:  #3d3b3b;
+}
+
+.form__btn-submit:hover {
+    color: black;
+}
+
+.btn__form--display {
+    margin-bottom: 30px;
+    background-color: orange;
+    outline: none;
+    border: 1px solid grey;
+    color: #3f3e3e;
+    padding: 10px;
+}
+
+.btn__form--display:hover {
+    color: black;
+}
+
+button, input, select, textarea {
+    margin-bottom: 10px;
+}
+
+.form__input--text,
+.form__input--date,
+.form__select--category {
+    width: 250px;
+    outline: none;
+}
+
+.form__select--category {
+    height: 40px;
+}
+
