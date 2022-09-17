@@ -71,8 +71,8 @@
             </div>
         </template>
 
-        <!--        archived-->
-        <ul id="task__list--archived" class="task__list task__list--archived">
+        <!--        total-->
+        <ul id="task-list-total" class="task__list task__list--total">
             <li class="task__item task__item--total task__item--headers">
                 <div class="task__item__component">Note category</div>
                 <div class="task__item__component">Active</div>
@@ -80,16 +80,13 @@
             </li>
         </ul>
 
-        <!--        archived-template-->
+        <!--       total-template-->
 
-        <template id="list__item__element--archived">
-            <h3>Archived:</h3>
-            <div class="list__item--text">
-                <div data-id="render-icon-value"></div>
-                <span data-id="render-title-value"></span>
-            </div>
-            <div data-id="render-time-value"></div>
-            <div data-id="render-category-value" class="category"></div>
+        <template id="total-tasks">
+            <div data-id="render-icon-value-total"></div>
+            <span data-id="render-type-total"></span>
+            <div data-id="render-number-active"></div>
+            <div data-id="render-number-arch"></div>
         </template>
 
     </div>
