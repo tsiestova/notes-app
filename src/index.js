@@ -1,3 +1,7 @@
 import "./index.css"
-import "./task.js"
+import { application } from "./app.module";
+
+document.addEventListener("DOMContentLoaded", () => {
+    application();
+});
 

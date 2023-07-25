@@ -1,9 +1,12 @@
 
-export const createId = () => {
-   let count = 1;
+let count = 0;
 
-    const id = (Math.random() * 1000 + count).toFixed(4);
+/**
+ * Generate unique ID
+ * @returns {number}
+ */
+export const createId = () => {
     count++;
 
-    return id;
+    return count;
 }

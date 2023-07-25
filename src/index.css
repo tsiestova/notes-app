@@ -4,12 +4,16 @@
 }
 
 .layout {
-    max-width: 60vw;
+    max-width: 70vw;
     margin: auto;
+    display: grid;
+    grid-template-rows: repeat(10, 10vh);
+    position: relative;
+    padding: 5px;
 }
 
 .btn__form__wrap {
-    text-align: right;
+    grid-row: 1;
 }
 
 .task__item__component {
@@ -22,7 +26,7 @@
 }
 
 .task__list {
-    margin: auto;
+    width: 100%;
 }
 
 .task__item {
@@ -36,8 +40,9 @@
     color: #423f3f;
 }
 
-.task__item--total {
+.task__item__total {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(50px, auto);
 }
 
 .task__item__child:hover {
@@ -75,15 +80,17 @@ button:hover {
     visibility: hidden;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
     display: flex;
     width: 70%;
-    margin: auto auto 20px;
+    position: absolute;
+    top: 83px;
+    left: 40px;
+
 }
 
-.edit-note-input {
-    display: none;
-}
+/*.edit-note-input {*/
+/*    display: none;*/
+/*}*/
 
 .btn--red {
     background-color: #af3535;
@@ -129,7 +136,7 @@ input {
 }
 
 .btn__form--display {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     background-color: orange;
     outline: none;
     border: 1px solid grey;
@@ -156,3 +163,33 @@ button, input, select, textarea {
     height: 40px;
 }
 
+.main-content__tasks-wrap {
+    grid-row: span 6;
+    overflow: scroll;
+    position: relative;
+}
+
+
+.task__list__total {
+    grid-row: span 3;
+    width: 100%;
+}
+
+
+.btn-clear, .bth-toggle {
+    display: inline-block;
+}
+
+#btn-toggle {
+    font-size: 10px;
+    outline: none;
+    border: 1px solid;
+}
+
+.btn-toggle__active-style {
+    background-color: orange;
+}
+
+/*li[data-archive] {*/
+/*    display: none;*/
+/*}*/
